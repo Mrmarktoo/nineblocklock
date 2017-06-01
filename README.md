@@ -14,7 +14,9 @@
 gradle引用：
 compile 'com.marktoo.widget:nineblocklock:1.0.3'
 maven引用：
+"
 <dependency> <groupId>com.marktoo.widget</groupId> <artifactId>nineblocklock</artifactId> <version>1.0.3</version> <type>pom</type> </dependency>
+"
 
 第一次bintray上传，准备不足，如有纰漏请见谅！
 发现问题和我联系哦！
