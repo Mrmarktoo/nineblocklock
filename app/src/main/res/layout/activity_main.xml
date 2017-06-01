@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mywidgets.demo.marktoo.com.MainActivity">
+
+    <com.marktoo.widget.NineBlockLockView
+        android:id="@+id/nineLock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        app:nbl_assistant_color="@color/gray"
+        app:nbl_background="@drawable/sea"
+        app:nbl_best_color="@color/green"
+        app:nbl_block_padding="30dp"
+        app:nbl_border_width="2dp"
+        app:nbl_gravity="bottom"
+        app:nbl_index_value="a,b,c,d,e,f,g,h,i"
+        app:nbl_normal_color="@color/blue"
+        app:nbl_path_width="5dp"
+        app:nbl_point_style="fill"
+        app:nbl_selected_color="@color/yellow"
+        app:nbl_show_assistant="false" />
+
+</LinearLayout>

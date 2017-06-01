@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NineBlockLockView">
+        <!--是否显示辅助线-->
+        <attr name="nbl_show_assistant" format="boolean" />
+        <!--辅助线颜色-->
+        <attr name="nbl_assistant_color" format="reference|color" />
+        <!--点的正常颜色-->
+        <attr name="nbl_normal_color" format="reference|color" />
+        <!--选中点的颜色-->
+        <attr name="nbl_selected_color" format="reference|color" />
+        <!--符合规则的颜色-->
+        <attr name="nbl_best_color" format="reference|color" />
+        <!--点位对应的值域-->
+        <attr name="nbl_index_value" format="reference|string" />
+
+        <!--每格内边距-->
+        <attr name="nbl_block_padding" format="dimension" />
+
+        <!--边框宽度-->
+        <attr name="nbl_border_width" format="dimension" />
+        <!--轨迹宽度-->
+        <attr name="nbl_path_width" format="dimension" />
+
+        <!--点位样式-->
+        <attr name="nbl_point_style">
+            <!--实心-->
+            <enum name="fill" value="0" />
+            <!--空心-->
+            <enum name="stroke" value="1" />
+        </attr>
+
+        <!--分布样式-->
+        <attr name="nbl_gravity">
+            <!--view大小均分-->
+            <enum name="fix" value="0" />
+            <!--头部对齐-->
+            <enum name="top" value="1" />
+            <!--居中对齐-->
+            <enum name="center" value="2" />
+            <!--底部对齐-->
+            <enum name="bottom" value="3" />
+        </attr>
+
+        <attr name="nbl_background" format="reference" />
+
+    </declare-styleable>
+</resources>
