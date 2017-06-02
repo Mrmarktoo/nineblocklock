@@ -34,11 +34,40 @@ dependencies {
 //PublishingPlugin.Rules#addConfiguredPublicationsToProjectPublicationRegistry
 //(ProjectPublicationRegistry, PublishingExtension, ProjectIdentifier)
 
+
+Properties p = new Properties();
+InputStream is = project.rootProject.file("local.properties").newDataInputStream();
+p.load(is);
+
+def userOrgValue=p.getProperty("userOrg")
+def groupIdValue=p.getProperty("groupId")
+def artifactIdValue=p.getProperty("artifactId")
+def publishVersionValue=p.getProperty("publishVersion")
+def descValue=p.getProperty("desc")
+def websiteValue=p.getProperty("website")
+
+def show = {
+    println(it)
+}
+
+def loadProperties = {
+    show(userOrgValue);
+    show(groupIdValue);
+    show(artifactIdValue);
+    show(publishVersionValue);
+    show(descValue);
+    show(websiteValue);
+}
+
+task loadProperty {
+    loadProperties();
+}
+
 publish {
-    userOrg = 'mrmarktoo'//bintray.com用户名
-    groupId = 'com.marktoo.widget'//jcenter上的路径
-    artifactId = 'nineblocklock'//项目名称
-    publishVersion = '1.0.1'//版本号
-    desc = 'optimize display style'//描述，不重要
-    website = 'https://github.com/Mrmarktoo/nineblocklock'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+    userOrg = userOrgValue//bintray.com用户名
+    groupId = groupIdValue//jcenter上的路径
+    artifactId = artifactIdValue//项目名称
+    publishVersion = publishVersionValue//版本号
+    desc = descValue//描述，不重要
+    website = websiteValue//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }

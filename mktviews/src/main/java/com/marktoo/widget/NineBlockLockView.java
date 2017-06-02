@@ -410,10 +410,14 @@ public class NineBlockLockView extends View {
             case MotionEvent.ACTION_UP:
                 if (pathPoints.size() < shortPassRole) {
                     LogUtil.getInstance().e("bad password");
-                    lockListener.onPassFailed();
+                    if (lockListener != null) {
+                        lockListener.onPassFailed();
+                    }
                 } else {
                     LogUtil.getInstance().e("password=" + getPassword());
-                    lockListener.onPassSuccess(getPassword());
+                    if (lockListener != null) {
+                        lockListener.onPassSuccess(getPassword());
+                    }
                 }
                 reset();
                 currentPoint = null;
